@@ -1,6 +1,39 @@
-# procurement-kpi
+## Procurement-kpi-Analysis
 
-## Supplier Performance
+# PROJECT OVERVIEW
+  This project explores procurement performance metrics using SQL (MySQL).
+  The dataset contains procurement-related KPIs such as product categories, supplier information, quantities, delivery status, lead times, and costs.
+
+# DATASET INFORMATION
+
+    | Column               | Description                                    |
+    | -------------------- | ---------------------------------------------- |
+    | `PO_ID`              | Purchase Order ID                              |
+    | `Supplier`           | Supplier Name                                  |
+    | `Item_Category`      | Category of the item                           |
+    | `Quantity`           | Number of items ordered                        |
+    | `Price`              | Price per unit                                 |
+    | `Order_Status`       | Status of the order (e.g., Delivered, Pending) |
+    | `Delivery_Time_Days` | Days taken to deliver                          |
+    | `Shipping_Cost`      | Cost of shipping                               |
+    | `Order_Date`         | Date of order                                  |
+    | `Delivery_Date`      | Date of delivery                               |
+    | `Lead_Time_Days`     | Supplier lead time                             |
+
+# TOOLS
+ - MySQL – Data exploration and analysis
+ - Tableau – For visualization of results
+
+## SKILLS
+  - SQL Joins,
+  - CTEs,
+  - CASE,
+  - Subqueries,
+  - Aggregate Functions
+
+## QUESTIONS 
+
+# 1. Supplier Performance
   Which supplier has delivered the highest total number of units excluding defective units? Only include Delivered orders.
         
     SELECT 
@@ -11,9 +44,10 @@
     GROUP BY Supplier
     ORDER BY Net_Units_Delivered DESC
     LIMIT 1;
-    
+<img width="608" height="138" alt="Screenshot 2025-08-11 193026" src="https://github.com/user-attachments/assets/80cb595d-d0f9-4703-a687-7cbd631fcbb1" />
 
-## Category Quality Analysis
+
+# 2. Category Quality Analysis
   Which item category has the highest average defect rate?
   Defect Rate = (Defective_Units / Quantity) * 100
   Only include Delivered orders, and ignore orders where Defective_Units is NULL.
@@ -27,8 +61,11 @@
     AND Quantity > 0
     GROUP BY Item_Category
     ORDER BY Average_Defect_Rate DESC;
+    
+<img width="495" height="146" alt="Screenshot 2025-08-11 193207" src="https://github.com/user-attachments/assets/a42b9cf7-6328-4920-a628-f197cd3088c8" />
 
-## Supplier Pricing Analysis
+
+# 3. Supplier Pricing Analysis
   For each supplier, list all their Purchase Orders where the negotiated price per unit is higher than that supplier’s average negotiated price across all their delivered orders.
 
     SELECT 
@@ -46,9 +83,11 @@
                           FROM procurement_kpi AS sub
                           WHERE sub.Supplier = pk.Supplier
                             AND sub.Order_Status = 'Delivered');
+                            
+<img width="517" height="295" alt="Screenshot 2025-08-11 193416" src="https://github.com/user-attachments/assets/f62f324c-6ef4-41c6-8de3-1b6d7def5ff1" />
 
 
-## Procurement Spend Classification
+# 4. Procurement Spend Classification
   Analyze total procurement spend per supplier and classify their spend tier based on total actual spend.
 
     SELECT
@@ -64,7 +103,10 @@
     GROUP BY supplier
     ORDER BY total_actual_spend;
 
-## Delivery Time Performance
+<img width="491" height="137" alt="Screenshot 2025-08-11 193511" src="https://github.com/user-attachments/assets/1917bd3a-feda-4f74-9ef5-6c334e585909" />
+
+
+# 5. Delivery Time Performance
 
 For each supplier, calculate:
 
@@ -92,7 +134,10 @@ Classify their delivery speed using:
       GROUP BY supplier
       ORDER BY average_delivery_time;
 
-## Cost Control Alert: Price Overruns
+<img width="497" height="138" alt="Screenshot 2025-08-11 193622" src="https://github.com/user-attachments/assets/94b93cf4-b7ec-45ce-b191-d4dd45e0408b" />
+
+
+# 6. Cost Control Alert: Price Overruns
   Identify all Purchase Orders where the supplier charged more per unit than the average unit price for that item category.
 
     SELECT
@@ -114,7 +159,10 @@ Classify their delivery speed using:
     AND main.Order_Status = 'delivered'
     ORDER BY item_category;
 
-## A list of delivered purchase orders 
+<img width="502" height="298" alt="Screenshot 2025-08-11 193819" src="https://github.com/user-attachments/assets/77b10edb-5ce3-4c63-ab0f-a237e8e70151" />
+
+
+# 7. A list of delivered purchase orders 
   where the quantity ordered is above the average quantity of all delivered orders.
 
     WITH avg_delivered_qty AS (
@@ -131,7 +179,10 @@ Classify their delivery speed using:
     WHERE quantity > avg_qty
     AND Order_Status = 'Delivered';
 
-## Which purchase orders had a quantity higher than the average for their own item category (among delivered orders)?
+<img width="460" height="296" alt="Screenshot 2025-08-11 194009" src="https://github.com/user-attachments/assets/b77dcaee-7f52-48fa-b71b-6c83c799b05a" />
+
+
+# 8. Which purchase orders had a quantity higher than the average for their own item category (among delivered orders)?
 
     WITH category_avg_quantity AS (
         SELECT
@@ -154,5 +205,10 @@ Classify their delivery speed using:
         pk.Order_Status = 'Delivered'
         AND pk.quantity > cte.avg_qty;
 
+<img width="482" height="294" alt="Screenshot 2025-08-11 194046" src="https://github.com/user-attachments/assets/e3aeb75a-4f31-4787-b7f8-f1741764409c" />
 
+
+# Author
+ - Caleb Eboigbe - Data Analyst (Supply Chain & finance Focus)
+ - Contact: [caleb.villa13@gmail.com]
 
