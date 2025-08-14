@@ -1,4 +1,4 @@
-## Procurement-kpi-Analysis
+## Procurement kpi Analysis
 
 # PROJECT OVERVIEW
   This project explores procurement performance metrics using SQL (MySQL).
@@ -207,6 +207,36 @@ Classify their delivery speed using:
 
 <img width="482" height="294" alt="Screenshot 2025-08-11 194046" src="https://github.com/user-attachments/assets/e3aeb75a-4f31-4787-b7f8-f1741764409c" />
 
+# Visual Insights (Tableau) 
+  Here are some visual insights created in Tableau:
+  
+  - Supplier Performance Dashboard
+    <img width="1531" height="778" alt="Screenshot 2025-08-13 192010" src="https://github.com/user-attachments/assets/9c610eb5-69d9-48ad-84a2-c7878373a820" />
+
+  - Category Quality Analysis
+    <img width="1533" height="781" alt="Screenshot 2025-08-13 192138" src="https://github.com/user-attachments/assets/4bf09505-7ea4-4c45-b28b-050db6af590c" />
+
+  - Supplier Pricing Analysis
+    <img width="1537" height="781" alt="Screenshot 2025-08-13 192238" src="https://github.com/user-attachments/assets/8d8b14c4-6353-4d32-a900-063ff9f90ad6" />
+
+  - Procurement Spend Classification
+    <img width="1538" height="781" alt="Screenshot 2025-08-13 192347" src="https://github.com/user-attachments/assets/d66ef151-49f7-451f-a1f1-4c5f0bbf7bb6" />
+
+  - Delivery Time Performance
+    <img width="1531" height="782" alt="Screenshot 2025-08-13 192442" src="https://github.com/user-attachments/assets/333b175c-d874-4894-ae00-710899cb3e57" />
+
+  - Cost Control Alert - Price Overruns
+    <img width="1536" height="782" alt="Screenshot 2025-08-13 192525" src="https://github.com/user-attachments/assets/67bd2a46-823b-443a-86fa-b2bac0eb6b44" />
+
+  - A list of delivered purchase orders
+    <img width="445" height="284" alt="Screenshot 2025-08-13 192602" src="https://github.com/user-attachments/assets/4a09cfd1-a107-4915-8048-f4a4673e022f" />
+
+  - Quantity higher than the average
+    <img width="1537" height="780" alt="Screenshot 2025-08-13 192639" src="https://github.com/user-attachments/assets/3e68ae78-b64b-4c0b-acb4-47ca59aada7d" />
+
+# Key Findings
+  - Defective Rates – Raw materials recorded the highest defect rates, while MRO items had the lowest, highlighting potential quality control gaps in raw material procurement.
+  - Supplier Price Trends – Gamma Co’s negotiated price fell from 2,033.1 in 2022 to 1,886.6 in 2023, while Beta Supply’s price surged from 1,530.5 to 2,462.5, indicating contrasting supplier cost dynamics.
 
 # Author
  - Caleb Eboigbe - Data Analyst (Supply Chain & finance Focus)
