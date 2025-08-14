@@ -237,6 +237,24 @@ Classify their delivery speed using:
 # Key Findings
   - Defective Rates – Raw materials recorded the highest defect rates, while MRO items had the lowest, highlighting potential quality control gaps in raw material procurement.
   - Supplier Price Trends – Gamma Co’s negotiated price fell from 2,033.1 in 2022 to 1,886.6 in 2023, while Beta Supply’s price surged from 1,530.5 to 2,462.5, indicating contrasting supplier cost dynamics.
+  - Top Performer in Delivery Volume – Epsilon Group delivered 123,693 more units than any other supplier, while Alpha Inc, Gamma Co, and Delta Logistics each recorded deliveries below 114,000 units.
+  - Procurement Spend vs. Supplier Performance – Epsilon Group recorded the highest procurement spend, while Alpha Group had the lowest. A potential positive correlation exists between procurement spend and supplier performance.
+  - Delivery Time Performance – Gamma Co achieved the shortest average delivery time (9 days), while Beta Supplies recorded the longest (11 days).
+  - Cost vs. Delivery Time – Gamma Co incurred higher costs than Beta Supplies, but no clear relationship was found between cost incurred and delivery time.
+  - Purchase Order Fulfillment Leaders – Delta Logistics and Beta Supplies led in the number of delivered purchase orders, while Gamma Co and Alpha Inc lagged behind.
+  - Delivery Time vs. Fulfillment – Beta Supplies’ long delivery time may be linked to their high purchase order volume. However, faster delivery does not necessarily lead to higher fulfillment rates, as seen with Gamma Co.
+
+# Possible Cause
+  - Lack of standardized inspections before shipment.
+  - Variations in logistics partnerships, geographic proximity, or production capacity.
+  - Limited supplier pool or strategic sourcing not applied.
+  - Focus on volume fulfillment over quality assurance.
+
+# Recommendations
+  - Conduct quarterly supplier quality audits for raw material vendors.
+  - Maintain good relationships with Gamma Co and explore opportunities to lock in lower rates.
+  - Identify and reward top-performing suppliers with preferred vendor status.
+  - Introduce performance-based contracts linking volume bonuses to defect thresholds.
 
 # Author
  - Caleb Eboigbe - Data Analyst (Supply Chain & finance Focus)
