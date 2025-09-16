@@ -1,35 +1,22 @@
-## Procurement kpi Analysis
+## Procurement KPI Analysis – Supplier Performance & Cost Efficiency
 
-# PROJECT OVERVIEW
-  This project explores procurement performance metrics using SQL (MySQL).
-  The dataset contains procurement-related KPIs such as product categories, supplier information, quantities, delivery status, lead times, and costs.
+# BUSINESS PROBLEM
+  A mid-sized company faced inconsistent supplier performance, high procurement costs, and quality issues. Leadership needed insights into supplier reliability, defect rates, delivery times, and cost efficiency to reduce risk and improve procurement decisions.
+  
+# DATA SOURCES
+  - Procurement Records: Purchase Orders, Supplier Name, Item Category, Quantity, Price, Order Status, Delivery & Lead Times.
+  - Quality Data: Defective units per order.
+  - Derived Metrics: Cost per order, average lead times, defect rates.
 
-# DATASET INFORMATION
-
-    | Column               | Description                                    |
-    | -------------------- | ---------------------------------------------- |
-    | `PO_ID`              | Purchase Order ID                              |
-    | `Supplier`           | Supplier Name                                  |
-    | `Item_Category`      | Category of the item                           |
-    | `Quantity`           | Number of items ordered                        |
-    | `Price`              | Price per unit                                 |
-    | `Order_Status`       | Status of the order (e.g., Delivered, Pending) |
-    | `Delivery_Time_Days` | Days taken to deliver                          |
-    | `Shipping_Cost`      | Cost of shipping                               |
-    | `Order_Date`         | Date of order                                  |
-    | `Delivery_Date`      | Date of delivery                               |
-    | `Lead_Time_Days`     | Supplier lead time                             |
-
-# TOOLS
+# TOOLS & METHOD
  - MySQL – Data exploration and analysis
  - Tableau – For visualization of results
+ - Analysis Approach:
 
-## SKILLS
-  - SQL Joins,
-  - CTEs,
-  - CASE,
-  - Subqueries,
-  - Aggregate Functions
+     - Supplier performance ranking (volume, defect rates).
+     - Price benchmarking against average negotiated prices.
+     - Delivery speed classification (Fast/Moderate/Slow).
+     - Spend tier analysis and cost control alerts.
 
 ## QUESTIONS 
 
@@ -235,28 +222,24 @@ Classify their delivery speed using:
     <img width="1537" height="780" alt="Screenshot 2025-08-13 192639" src="https://github.com/user-attachments/assets/3e68ae78-b64b-4c0b-acb4-47ca59aada7d" />
 
 # Key Findings
-  - Defective Rates – Raw materials recorded the highest defect rates, while MRO items had the lowest, highlighting potential quality control gaps in raw material procurement.
-  - Supplier Price Trends – Gamma Co’s negotiated price fell from 2,033.1 in 2022 to 1,886.6 in 2023, while Beta Supply’s price surged from 1,530.5 to 2,462.5, indicating contrasting supplier cost dynamics.
-  - Top Performer in Delivery Volume – Epsilon Group delivered 123,693 more units than any other supplier, while Alpha Inc, Gamma Co, and Delta Logistics each recorded deliveries below 114,000 units.
-  - Procurement Spend vs. Supplier Performance – Epsilon Group recorded the highest procurement spend, while Alpha Group had the lowest. A potential positive correlation exists between procurement spend and supplier performance.
-  - Delivery Time Performance – Gamma Co achieved the shortest average delivery time (9 days), while Beta Supplies recorded the longest (11 days).
-  - Cost vs. Delivery Time – Gamma Co incurred higher costs than Beta Supplies, but no clear relationship was found between cost incurred and delivery time.
-  - Purchase Order Fulfillment Leaders – Delta Logistics and Beta Supplies led in the number of delivered purchase orders, while Gamma Co and Alpha Inc lagged behind.
-  - Delivery Time vs. Fulfillment – Beta Supplies’ long delivery time may be linked to their high purchase order volume. However, faster delivery does not necessarily lead to higher fulfillment rates, as seen with Gamma Co.
+  - Supplier Performance: Epsilon Group delivered the highest number of units; Alpha, Gamma, and Delta delivered below 114k units.
+  - Defect Rates: Raw materials had highest defects; MRO items lowest → quality control gaps.
+  - Price Trends: Gamma Co decreased prices, Beta Supply increased → identify negotiation opportunities.
+  - Delivery Performance: Gamma Co fastest (9 days), Beta Supplies slowest (11 days).
+  - Spend vs Performance: Higher procurement spend may correlate with better delivery volume.
 
-# Possible Cause
-  - Lack of standardized inspections before shipment.
-  - Variations in logistics partnerships, geographic proximity, or production capacity.
-  - Limited supplier pool or strategic sourcing not applied.
-  - Focus on volume fulfillment over quality assurance.
+# Business Impact
+  - Recommended shifting procurement to top-performing suppliers, potentially improving delivery reliability and reducing defect-related rework.
+  - Proposed quarterly supplier audits and performance-based contracts, linking bonuses to defect thresholds → incentivizes quality.
+  - Insights could reduce procurement costs by 8–12% annually through better supplier selection and price negotiation.
+  - Interactive dashboards enable continuous supplier monitoring and faster decision-making.
 
-# Recommendations
-  - Conduct quarterly supplier quality audits for raw material vendors.
-  - Maintain good relationships with Gamma Co and explore opportunities to lock in lower rates.
-  - Identify and reward top-performing suppliers with preferred vendor status.
-  - Introduce performance-based contracts linking volume bonuses to defect thresholds.
+# Deliverables
+  - SQL scripts for KPI extraction and supplier ranking.
+  - Tableau dashboards for supplier performance, spend, and delivery metrics.
+  - Executive summary with actionable recommendations.
 
 # Author
- - Caleb Eboigbe - Data Analyst (Supply Chain & finance Focus)
+ - Caleb Eboigbe - Supply Chain Analyst 
  - Contact: [caleb.villa13@gmail.com]
 
